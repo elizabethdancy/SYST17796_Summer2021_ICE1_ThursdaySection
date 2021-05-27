@@ -1,7 +1,7 @@
 
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -53,11 +53,11 @@ public class CardTrick {
 
         //Then report the result here
         if (found >= 1) {
-            System.out.println("Yes, your card, " + user.getValue() + " of " + 
-                    user.getSuit() + ", was found.");
+            System.out.println("Yes, your card, " + luckyCard.getValue() + " of " + 
+                    luckyCard.getSuit() + ", was found.");
         } else {
-            System.out.println("No, your card, " + user.getValue() + " of " + 
-                    user.getSuit() + ", was not found.");
+            System.out.println("No, your card, " + luckyCard.getValue() + " of " + 
+                    luckyCard.getSuit() + ", was not found.");
         }
 
         //follow the remainder of the instructions in the ICE 1 doc
