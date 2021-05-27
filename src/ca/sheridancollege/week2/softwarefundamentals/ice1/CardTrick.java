@@ -1,30 +1,55 @@
-
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
+import java.util.Random;
+import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
- * @author dancye
+ * @author Andraws
+ * Student ID: 991407087
  */
-public class CardTrick {
-    
+public class CardTrick
+{
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Random rand = new Random();
+        int low = 1;
+        int high = 14;
         
         for (int i=0; i<magicHand.length; i++)
-        {
-            Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            //assign c to magichHand[i] here
+        { 
+            int value = rand.nextInt(high-low) + low;
+            int suit = rand.nextInt(4);
+            Card card = new Card();
+           
+            card.setValue(value);
+            card.setSuit(Card.SUITS[suit]);
+            
+            magicHand[i]=card;
+            System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit());
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-        //follow the remainder of the instructions in the ICE 1 doc
+        Scanner scanner = new Scanner(System.in);  // Create a Scanner object
+        
+        System.out.println("Enter your card value (1-13):");
+        int cardValue = scanner.nextInt();  // Read user input
+        System.out.println("You card value is: " + cardValue);  // Output user input
+        
+        String empty = scanner.nextLine(); //Empty scanner to read next line
+        
+        System.out.println("Enter your card suit (Clubs, Spades, Diamonds, Hearts):");
+        String cardSuit = scanner.nextLine();  // Read user input
+        System.out.println("Your card suit is: " + cardSuit);  // Output user input
+        
+        for (Card magicHand1 : magicHand)
+        {
+            if (cardValue == magicHand1.getValue() && cardSuit.equals(magicHand1.getSuit()))
+            {
+                System.out.println("You guessed the card right! :)");
+                break;
+            }
+        }
     }
-    
 }
