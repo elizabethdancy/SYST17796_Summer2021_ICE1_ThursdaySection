@@ -20,8 +20,8 @@ public class CardTrick {
 
         String[] hand = { "Placeholder 1", "Placeholder 2", "Placeholder 3", "Placeholder 4", "Placeholder 5",
                 "Placeholder 6", "Placeholder 7" }; // array declaration
-        
-        String luckyCard = "5 of Diamonds"; // Lucky card declaration 
+
+        String luckyCard = "5 of Diamonds"; // Lucky card declaration
 
         for (int i = 0; i < magicHand.length; i++) {
 
@@ -36,18 +36,27 @@ public class CardTrick {
 
         }
 
-        Scanner inData = new Scanner(System.in);
+        /*
+         * Scanner inData = new Scanner(System.in);
+         * 
+         * String userPick; // variable declaration
+         * 
+         * 
+         * System.out.print("Pick any card (Format: # of SUIT): "); userPick =
+         * inData.nextLine(); // gets user input for (int j = 0; j < 8;) { if
+         * (userPick.equalsIgnoreCase(hand[j])) { // scans array for card
+         * System.out.println("Your card is in your deck"); break; } else if (j == 6) {
+         * // reached end of array so card isn't in deck
+         * System.out.println("Your card isn't in your deck"); break; } else { //
+         * iterates array j++; } }
+         */
 
-        String userPick; // variable declaration
-
-        System.out.print("Pick any card (Format: # of SUIT): ");
-        userPick = inData.nextLine(); // gets user input
         for (int j = 0; j < 8;) {
-            if (userPick.equalsIgnoreCase(hand[j])) { // scans array for card
-                System.out.println("Your card is in your deck");
+            if (luckyCard.equalsIgnoreCase(hand[j])) { // scans array for card
+                System.out.println("You Win!");
                 break;
-            } else if (j == 6) { // reached end of array so card isnt in deck
-                System.out.println("Your card isn't in your deck");
+            } else if (j == 6) { // reached end of array so card isn't in deck
+                System.out.println("You lost, Better luck next time!");
                 break;
             } else { // iterates array
                 j++;
