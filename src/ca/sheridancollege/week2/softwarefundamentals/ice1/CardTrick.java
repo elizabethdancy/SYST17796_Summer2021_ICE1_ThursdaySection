@@ -8,6 +8,7 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * 
  * @modifier Juyoung Jung
  */
 public class CardTrick {
@@ -36,7 +37,7 @@ public class CardTrick {
         // Create user's Card object
         Card userCard = new Card();
         
-        // Ask the user to pick a card and assign in to userCard
+        // Ask the user to pick a card and assign it to userCard
         System.out.print("Enter a random number (1 ~ 13) : ");
         int num = input.nextInt();
         System.out.println("Choose a suit: ");
@@ -49,8 +50,7 @@ public class CardTrick {
         
         char isGuessed = 'N';
                 
-        // Search the 7 magicHand if there's matching card with the user's card
-        // Print if the user pick the matching card
+        // Search magicHand array if there's matching card with the user's card
         for (int i = 0; i < magicHand.length; i++) {
             if (magicHand[i].getValue() == userCard.getValue()
                     && magicHand[i].getSuit().equals(userCard.getSuit())) {
@@ -59,6 +59,7 @@ public class CardTrick {
             }
         }
         
+        // Print the result
         if (isGuessed == 'Y') {
             System.out.println("You got it!");
         } else {
