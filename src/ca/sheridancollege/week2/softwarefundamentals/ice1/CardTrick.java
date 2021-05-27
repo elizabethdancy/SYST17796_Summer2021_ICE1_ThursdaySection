@@ -20,6 +20,8 @@ public class CardTrick {
 
         String[] hand = { "Placeholder 1", "Placeholder 2", "Placeholder 3", "Placeholder 4", "Placeholder 5",
                 "Placeholder 6", "Placeholder 7" }; // array declaration
+        
+        String luckyCard = "5 of Diamonds"; // Lucky card declaration 
 
         for (int i = 0; i < magicHand.length; i++) {
 
