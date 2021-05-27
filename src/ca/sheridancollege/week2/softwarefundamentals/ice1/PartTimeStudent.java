@@ -11,7 +11,7 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  */
 public class PartTimeStudent {
     
-   String id;
+   String idStudent;
    String name;
    String address;
     
