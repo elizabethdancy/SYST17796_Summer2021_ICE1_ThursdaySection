@@ -47,8 +47,8 @@ public class CardTrick {
         */
         
         Boolean isInMagicHand = false;
-        for(int i=0; i<magicHand.length; i++){
-            if(magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())){
+        for (Card magicHand1 : magicHand) {
+            if (magicHand1.getValue() == luckyCard.getValue() && magicHand1.getSuit().equals(luckyCard.getSuit())) {
                 isInMagicHand = true;
             }
         }
