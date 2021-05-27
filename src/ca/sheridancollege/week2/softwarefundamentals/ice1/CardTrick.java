@@ -1,7 +1,7 @@
 
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
@@ -24,16 +24,31 @@ public class CardTrick {
             magicHand[i] = c;
         }
         
+        /*
         Card userCard1 = new Card();
         Scanner in = new Scanner(System.in);
         System.out.println("Please pick a card value:");
         userCard1.setValue(in.nextInt());
         System.out.println("Please pick a card suit number (random number between 0 and 3):");
         userCard1.setSuit(Card.SUITS[in.nextInt()]);
+        */
         
+        Card luckyCard = new Card();
+        luckyCard.setValue(10);
+        luckyCard.setSuit(Card.SUITS[3]);
+        
+        /* 
         Boolean isInMagicHand = false;
         for(int i=0; i<magicHand.length; i++){
             if(magicHand[i].getValue() == userCard1.getValue() && magicHand[i].getSuit().equals(userCard1.getSuit())){
+                isInMagicHand = true;
+            }
+        }
+        */
+        
+        Boolean isInMagicHand = false;
+        for(int i=0; i<magicHand.length; i++){
+            if(magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())){
                 isInMagicHand = true;
             }
         }
