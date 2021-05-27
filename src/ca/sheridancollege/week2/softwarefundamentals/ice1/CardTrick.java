@@ -43,16 +43,18 @@ public class CardTrick {
         userCard.setSuit(Card.SUITS[1]);
         // and search magicHand here
         //Then report the result here
+        boolean guessed = false;
         for(Card c : magicHand){
                 System.out.print(c.getValue() + " " + c.getSuit() + " - ");
             if(userCard.getValue() == c.getValue() &&
                     userCard.getSuit().equals(c.getSuit())){
-                System.out.println("YOU ARE RIGHT THIS CARD"
-                        + " IS IN THE MAGIC HAND, CONGRATS!!!!");
-            }else{
-                System.out.println("You are wrong, this card"
-                        + " is not in the magic hand!");
+                guessed = true;
+                
             }
+        }
+        if(guessed == true{
+            System.out.println("YOU ARE RIGHT THIS CARD"
+                        + " IS IN THE MAGIC HAND, CONGRATS!!!!");
         }
     }
 }
