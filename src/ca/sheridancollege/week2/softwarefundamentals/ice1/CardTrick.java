@@ -1,11 +1,14 @@
 
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
+import java.util.Scanner;
+
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
+ * @modifier Juyoung Jung
  */
 public class CardTrick {
     
@@ -13,18 +16,61 @@ public class CardTrick {
     {
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
-        {
+        // This for loop will create 7 Card object
+        for (int i = 0; i < magicHand.length; i++) {
+            
+            // Create Card object c
             Card c = new Card();
-            //c.setValue(insert call to random number generator here)
-            //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-            //assign c to magichHand[i] here
+            
+            // Assign a value (1~13), suit (clubs, hearts, spades or diamonds)
+            c.setValue((int)(Math.random() * 13 + 1));
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
+            
+            // Assign c to magichHand[i]
+            magicHand[i] = c;
+        }
+
+        // Create scanner
+        Scanner input = new Scanner(System.in);
+        
+        // Create user's Card object
+        Card userCard = new Card();
+        
+        // Ask the user to pick a card and assign in to userCard
+        System.out.print("Enter a random number (1 ~ 13) : ");
+        int num = input.nextInt();
+        System.out.println("Choose a suit: ");
+        System.out.println("  1)Heart \n  2)Diamond \n  3)Spade \n  4)Club");
+        System.out.print("Enter a suit number (1 ~ 4) : ");
+        int suit = input.nextInt();
+
+        userCard.setValue(num);
+        userCard.setSuit(Card.SUITS[suit - 1]);
+        
+        char isGuessed = 'N';
+                
+        // Search the 7 magicHand if there's matching card with the user's card
+        // Print if the user pick the matching card
+        for (int i = 0; i < magicHand.length; i++) {
+            if (magicHand[i].getValue() == userCard.getValue()
+                    && magicHand[i].getSuit().equals(userCard.getSuit())) {
+                    isGuessed = 'Y';
+                    break;
+            }
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-        //follow the remainder of the instructions in the ICE 1 doc
-    }
+        if (isGuessed == 'Y') {
+            System.out.println("You got it!");
+        } else {
+            System.out.println("You guessed wrong!");
+        }
     
+    
+        // Display the 7 random cards
+        System.out.println("\nThese are the 7 cards.");
+        
+        for (Card magic: magicHand) {
+            System.out.println(magic.getValue() + " of " + magic.getSuit());
+        }
+    }   
 }
