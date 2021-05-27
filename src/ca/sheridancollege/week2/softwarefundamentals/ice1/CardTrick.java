@@ -28,14 +28,17 @@ public class CardTrick {
         }
         
         //insert code to ask the user for Card value and suit, create their card
-        Scanner input = new Scanner(System.in);
+        //Scanner input = new Scanner(System.in);
         
         Card user = new Card();
-        System.out.println("Enter a card value from 1-13: ");
-        user.setValue(input.nextInt());
+        user.setValue(8);
+        user.setSuit(Card.SUITS[2]);
         
-        System.out.println("Enter a card suit from 0-3: ");
-        user.setSuit(Card.SUITS[input.nextInt()]);
+        //System.out.println("Enter a card value from 1-13: ");
+        //user.setValue(input.nextInt());
+        
+        //System.out.println("Enter a card suit from 0-3: ");
+        //user.setSuit(Card.SUITS[input.nextInt()]);
         
         // and search magicHand here
         int found = 0;
