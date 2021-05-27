@@ -14,6 +14,9 @@ public class CardTrick
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
+        Card[] luckyCard = new Card[1];
+        luckyCard.setValue(1);
+        luckyCard.setSuit(Card.SUITS[Hearts]);
         Random rand = new Random();
         int low = 1;
         int high = 14;
