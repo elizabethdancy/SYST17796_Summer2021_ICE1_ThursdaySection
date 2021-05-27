@@ -23,11 +23,6 @@ public class CardTrick {
             // Create Card object c
             Card c = new Card();
             
-            // Create Card object luckyCard, and set a value and suit
-            Card luckyCard = new Card();
-            luckyCard.setValue(1);
-            luckyCard.setSuit(Card.SUITS[0]);
-            
             // Assign a value (1~13), suit (clubs, hearts, spades or diamonds)
             c.setValue((int)(Math.random() * 13 + 1));
             c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
@@ -35,30 +30,35 @@ public class CardTrick {
             // Assign c to magichHand[i]
             magicHand[i] = c;
         }
-
-        // Create scanner
-        Scanner input = new Scanner(System.in);
         
-        // Create user's Card object
-        Card userCard = new Card();
+        // Create Card object luckyCard, and assign a value and a suit
+        Card luckyCard = new Card();
+        luckyCard.setValue(1);
+        luckyCard.setSuit(Card.SUITS[0]);
         
-        // Ask the user to pick a card and assign it to userCard
-        System.out.print("Enter a random number (1 ~ 13) : ");
-        int num = input.nextInt();
-        System.out.println("Choose a suit: ");
-        System.out.println("  1)Heart \n  2)Diamond \n  3)Spade \n  4)Club");
-        System.out.print("Enter a suit number (1 ~ 4) : ");
-        int suit = input.nextInt();
-
-        userCard.setValue(num);
-        userCard.setSuit(Card.SUITS[suit - 1]);
+//        // Create scanner
+//        Scanner input = new Scanner(System.in);
+//        
+//        // Create user's Card object
+//        Card userCard = new Card();
+//        
+//        // Ask the user to pick a card and assign it to userCard
+//        System.out.print("Enter a random number (1 ~ 13) : ");
+//        int num = input.nextInt();
+//        System.out.println("Choose a suit: ");
+//        System.out.println("  1)Heart \n  2)Diamond \n  3)Spade \n  4)Club");
+//        System.out.print("Enter a suit number (1 ~ 4) : ");
+//        int suit = input.nextInt();
+//
+//        userCard.setValue(num);
+//        userCard.setSuit(Card.SUITS[suit - 1]);
         
-        char isGuessed = 'N';
+        char isGuessed = 'N';    
                 
         // Search magicHand array if there's matching card with the user's card
         for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getValue() == userCard.getValue()
-                    && magicHand[i].getSuit().equals(userCard.getSuit())) {
+            if (magicHand[i].getValue() == luckyCard.getValue() 
+                    && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
                     isGuessed = 'Y';
                     break;
             }
@@ -72,11 +72,11 @@ public class CardTrick {
         }
     
     
-        // Display the 7 random cards
-        System.out.println("\nThese are the 7 cards.");
-        
-        for (Card magic: magicHand) {
-            System.out.println(magic.getValue() + " of " + magic.getSuit());
-        }
+//        // Display the 7 random cards
+//        System.out.println("\nThese are the 7 cards.");
+//        
+//        for (Card magic: magicHand) {
+//            System.out.println(magic.getValue() + " of " + magic.getSuit());
+//        }
     }   
 }
