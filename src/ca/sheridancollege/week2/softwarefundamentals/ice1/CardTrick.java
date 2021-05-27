@@ -14,12 +14,14 @@ public class CardTrick
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
-        Card[] luckyCard = new Card[1];
+        Card luckyCard = new Card();
         luckyCard.setValue(1);
-        luckyCard.setSuit(Card.SUITS[Hearts]);
+        luckyCard.setSuit(Card.SUITS[0]);
+        //System.out.println(luckyCard.getValue() + luckyCard.getSuit());
         Random rand = new Random();
         int low = 1;
         int high = 14;
+        int ctr = 0;
         
         for (int i=0; i<magicHand.length; i++)
         { 
@@ -34,6 +36,26 @@ public class CardTrick
             System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit());
         }
         
+        for (Card magicHand1 : magicHand)
+        {   
+            if (luckyCard.getValue() == magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit()))
+            {
+                System.out.println("You guessed the card right! :)");
+                break;
+            }
+            
+            else
+            {
+                ctr++;
+            }
+        }
+        
+        if (ctr == 7)
+        {
+            System.out.println("You guessed the card wrong! :(");
+        }
+        
+        /*
         Scanner scanner = new Scanner(System.in);  // Create a Scanner object
         
         System.out.println("Enter your card value (1-13):");
@@ -54,5 +76,6 @@ public class CardTrick
                 break;
             }
         }
+        */
     }
 }
