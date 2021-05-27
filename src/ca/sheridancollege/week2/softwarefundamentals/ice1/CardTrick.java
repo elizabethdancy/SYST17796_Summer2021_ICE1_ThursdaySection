@@ -17,6 +17,7 @@ public class CardTrick {
         Card[] magicHand = new Card[7];
         Scanner sc = new Scanner(System.in);
         boolean show = false;
+        // press F and it WILL NOT SHOW YOU CARDS. Press T and it WILL show you the generated cards
         System.out.println("Are you here for fun or are you testing this app? F/T");
         if(sc.next().toLowerCase().equals("t")){
             show = true;
@@ -34,10 +35,12 @@ public class CardTrick {
         }
         //insert code to ask the user for Card value and suit, create their card
         Card userCard = new Card();
-        System.out.println("Choose the card value 1 - 13");
+        /*System.out.println("Choose the card value 1 - 13");
         userCard.setValue(sc.nextInt());
         System.out.println("Choose the card suit 0-3");
-        userCard.setSuit(Card.SUITS[sc.nextInt()]);
+        userCard.setSuit(Card.SUITS[sc.nextInt()]);*/
+        userCard.setValue(13);
+        userCard.setSuit(Card.SUITS[1]);
         // and search magicHand here
         //Then report the result here
         for(Card c : magicHand){
