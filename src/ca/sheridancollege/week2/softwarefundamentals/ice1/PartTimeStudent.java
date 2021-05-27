@@ -13,5 +13,6 @@ public class PartTimeStudent {
     
    String id;
    String name;
+   String address;
     
 }
