@@ -30,9 +30,9 @@ public class CardTrick {
         //insert code to ask the user for Card value and suit, create their card
         //Scanner input = new Scanner(System.in);
         
-        Card user = new Card();
-        user.setValue(8);
-        user.setSuit(Card.SUITS[2]);
+        Card luckyCard = new Card();
+        luckyCard.setValue(8);
+        luckyCard.setSuit(Card.SUITS[2]);
         
         //System.out.println("Enter a card value from 1-13: ");
         //user.setValue(input.nextInt());
@@ -45,8 +45,8 @@ public class CardTrick {
         
         for (int i=0; i<magicHand.length; i++)   
         {
-            if (user.getSuit().equals(magicHand[i].getSuit()) && 
-                    user.getValue() == magicHand[i].getValue()) {
+            if (luckyCard.getSuit().equals(magicHand[i].getSuit()) && 
+                    luckyCard.getValue() == magicHand[i].getValue()) {
                 found++;
             }
         }
