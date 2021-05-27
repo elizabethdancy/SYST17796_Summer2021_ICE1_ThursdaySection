@@ -19,6 +19,9 @@ public class CardTrick {
     public static void main(String [] args)
     {
         Card[] magicHand = new Card[7];
+        Card luckyCard = new Card();
+        luckyCard.setSuit("Clubs");
+        luckyCard.setValue(6);
         
         //Generating the magic cards. 
         
@@ -48,7 +51,7 @@ public class CardTrick {
         String suit = input.next();
         
          hasCard (magicHand, value, suit) ;
-         
+        
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
