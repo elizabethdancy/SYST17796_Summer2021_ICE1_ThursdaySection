@@ -23,6 +23,11 @@ public class CardTrick {
             // Create Card object c
             Card c = new Card();
             
+            // Create Card object luckyCard, and set a value and suit
+            Card luckyCard = new Card();
+            luckyCard.setValue(1);
+            luckyCard.setSuit(Card.SUITS[0]);
+            
             // Assign a value (1~13), suit (clubs, hearts, spades or diamonds)
             c.setValue((int)(Math.random() * 13 + 1));
             c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
