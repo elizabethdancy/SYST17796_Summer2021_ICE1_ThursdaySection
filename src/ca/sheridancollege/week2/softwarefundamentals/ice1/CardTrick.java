@@ -51,6 +51,8 @@ public class CardTrick {
         String suit = input.next();
         
          hasCard (magicHand, value, suit) ;
+         
+         hasCard (magicHand, luckyCard.getValue(), luckyCard.getSuit());
         
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
