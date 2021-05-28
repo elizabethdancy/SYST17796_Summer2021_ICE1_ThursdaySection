@@ -1,6 +1,5 @@
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
-
-import java.util.Scanner; //Definitely required for the user input process.
+import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
@@ -29,6 +28,8 @@ public class CardTrick
          magicHand[i] = cards;
       }
 
+
+
       //TODO: Make a user input for the user to enter their card (their values and
       //their card suit).
       System.out.print("Enter a value between 1 - 13: ");
@@ -37,6 +38,13 @@ public class CardTrick
       System.out.print("Enter a suit of cards (Hearts, Diamonds, "
           + "Spades, Clubs): ");
       String userSuit = input.next();
+
+
+
+      //TODO: Add a statement that shows the randomized cards.
+      for (Card randomCards : magicHand) {
+         System.out.println(randomCards.getValue() + " " + randomCards.getSuit());
+      }
 
 
 
@@ -51,6 +59,9 @@ public class CardTrick
             equalCards++;
          }
       }
+
+
+
 
       //TODO: Determine if the player wins or looses.
       if (equalCards > 0) {
