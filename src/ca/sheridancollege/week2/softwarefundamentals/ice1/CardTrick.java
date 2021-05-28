@@ -62,8 +62,7 @@ public class CardTrick
             }
             break;
         }
-
-        //follow the remainder of the instructions in the ICE 1 doc
-    }
+        
+    } // main method
 
 }
