@@ -16,7 +16,7 @@ public class CardTrick {
         Scanner input = new Scanner(System.in);
         
         Card[] magicHand = new Card[7];
-        
+        Card luckyCard = new Card("Diamonds", 12);
         for (int i=0; i < magicHand.length; i++)
         {
             Card c = new Card();
@@ -28,7 +28,9 @@ public class CardTrick {
             
             c.setValue(valueNum);
             c.setSuit(Card.SUITS[suitNum]);
-            magicHand[i] = c;           
+            magicHand[i] = c;
+            System.out.println(magicHand[i].getValue());
+            System.out.println(magicHand[i].getSuit());
         }
         
         /*
@@ -40,27 +42,29 @@ public class CardTrick {
         Card userCard = new Card(userSuit, userValue); */
         
         // and search magicHand here
-        boolean guess = true;
-        for (int i = 0; i < 7; i++) {
+        boolean guess = false;
+        int i = 0;
+        while (!guess && i < magicHand.length) {            
             if (luckyCard.getSuit().equals(magicHand[i].getSuit()) && 
-            luckyCard.getValue() == magicHand[i].getValue()) {
-                guess = true;
-            }else{
-                guess = false;
-            }
+                luckyCard.getValue() == magicHand[i].getValue()) {
+                  guess = true;
+                }
+            i++;
         }
         
         //Then report the result here
         if (guess) {
                 System.out.printf("You guessed the %d of %s..... It's a match! "
-                        + "Yer a wizard Harry!", userValue, userSuit);
+                        + "Yer a wizard Harry!", luckyCard.getValue(), 
+                        luckyCard.getSuit());
             }else{
                 System.out.printf("You guessed the %d of %s..... Umm no... You "
                         + "are banned from the Alliannce of Magicians", 
-                        userValue, userSuit);
+                        luckyCard.getValue(), luckyCard.getSuit());
             }
         //follow the remainder of the instructions in the ICE 1 doc
-        Card luckyCard = new Card("Diamonds", 12);
+        
     }
+    
     
 }
