@@ -60,6 +60,7 @@ public class CardTrick {
                         userValue, userSuit);
             }
         //follow the remainder of the instructions in the ICE 1 doc
+        Card luckyCard = new Card("Diamonds", 12);
     }
     
 }
