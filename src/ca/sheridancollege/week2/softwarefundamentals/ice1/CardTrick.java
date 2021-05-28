@@ -53,13 +53,11 @@ public class CardTrick
             if (userValue == magicHand[i].getValue() && userSuit.equalsIgnoreCase(magicHand[i].getSuit())) {
                 System.out.println("Conglatuation! Your card " + userValue + " of " + userSuit + " is in the Magic hand!");
 
-                // report a winning message for the lucky card
-            }
-            else if (userValue == luckyCard.getValue() && userSuit.equalsIgnoreCase(luckyCard.getSuit())) {
+            // report a winning message for the lucky card
+            } else if (userValue == luckyCard.getValue() && userSuit.equalsIgnoreCase(luckyCard.getSuit())) {
                 System.out.println("Conglatuation! Your card " + userValue + " of " + userSuit + " is the Lucky Card!");
-
-            }
-            else {
+            // report a losing message
+            } else {
                 System.out.println("Sorry! Your card " + userValue + " of " + userSuit + " is not in the Magic hand!");
             }
             break;
