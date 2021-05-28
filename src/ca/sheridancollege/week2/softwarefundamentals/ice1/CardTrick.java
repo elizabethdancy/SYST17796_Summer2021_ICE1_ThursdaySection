@@ -15,9 +15,15 @@ public class CardTrick {
 
     public static void main(String[] args) {
         Card[] magicHand = new Card[7];
-        Card userChoice = new Card();
+        
+        /* Card userChoice = new Card();
+       
         userChoice.setValue(1);
-        userChoice.setSuit(Card.SUITS[0]);
+        userChoice.setSuit(Card.SUITS[0]); */
+        
+        Card luckyCard = new Card();
+        luckyCard.setValue(7);
+        luckyCard.setSuit("Hearts");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -33,6 +39,7 @@ public class CardTrick {
             System.out.println(magicHand[i].getValue() + " " + magicHand[i].getSuit());
         }
 
+         /*
         //insert code to ask the user for Card value and suit to create their card
         Scanner input = new Scanner(System.in);
 
@@ -47,13 +54,25 @@ public class CardTrick {
         String userSuit = input.nextLine();
         System.out.printf("You choice is %s.\n", userSuit);
         userChoice.setSuit(userSuit);
+        */
 
         //search magicHand here
         boolean result = true;
 
+        /*
         for (int i = 0; i < magicHand.length; i++) {
             if (magicHand[i].getValue() == userChoice.getValue() 
             && userChoice.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
+                result = true;
+            } else {
+                result = false;
+            }
+        }
+        */
+        
+        for(int i = 0; i < magicHand.length; i++){
+             if (magicHand[i].getValue() == luckyCard.getValue() 
+            && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())){
                 result = true;
             } else {
                 result = false;
