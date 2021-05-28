@@ -33,14 +33,14 @@ public class CardTrick
       //TODO: Make a user input for the user to enter their card (their values and
       //their card suit).
       /*
-      System.out.print("Enter a value between 1 - 13: ");
-      int cardValue = input.nextInt();
+       * System.out.print("Enter a value between 1 - 13: ");
+       * int cardValue = input.nextInt();
+       *
+       * System.out.print("Enter a suit of cards (Hearts, Diamonds, "
+       * + "Spades, Clubs): ");
+       * String userSuit = input.next();
+       */
 
-      System.out.print("Enter a suit of cards (Hearts, Diamonds, "
-          + "Spades, Clubs): ");
-      String userSuit = input.next();
-      */
-      
       //TODO: Insert the user's card number and card suit inside of a class
       //called "luckyCard".
       Card luckyCard = new Card();
@@ -60,8 +60,8 @@ public class CardTrick
       int equalCards = 0;
       for (int i = 0; i < magicHand.length; i++) {
 
-         if (cardValue == magicHand[i].getValue()
-             && userSuit.equalsIgnoreCase(magicHand[i].getSuit())) {
+         if (luckyCard.getValue() == magicHand[i].getValue()
+             && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())) {
 
 
             equalCards++;
