@@ -26,6 +26,10 @@ public class CardTrick
          magicHand[i] = c;
          //assign c to magichHand[i] here
       }
+      Card luckyCard = new Card();
+      luckyCard.setValue = (3);
+      luckyCard.setSuit(Card.SUIT[2]);
+      
 
       Scanner in = new Scanner(System.in);
       Card user = new Card();
