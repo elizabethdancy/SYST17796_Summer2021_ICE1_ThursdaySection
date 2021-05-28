@@ -30,7 +30,7 @@ public class CardTrick
 
          //System.out.println(c.getValue() + " of: " + c.getSuit());
          magicHand[i] = c;
-         //assign c to magichHand[i] here
+
       }
 
 
@@ -62,9 +62,6 @@ public class CardTrick
          }
       }
 
-      // and search magicHand here
-      //Then report the result here
-      //follow the remainder of the instructions in the ICE 1 doc
    }
 
 }
