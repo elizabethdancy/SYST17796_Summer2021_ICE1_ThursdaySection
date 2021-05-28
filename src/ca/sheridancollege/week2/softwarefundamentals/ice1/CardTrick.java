@@ -20,7 +20,7 @@ public class CardTrick
          Card c = new Card();
          //c.setValue(insert call to random number generator here)
          Random ra = new Random();
-         int numCard = r.nextInt(13) + 1;
+         int numCard = ra.nextInt(13) + 1;
          c.setValue(numCard);
          System.out.println(numCard);
          //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
