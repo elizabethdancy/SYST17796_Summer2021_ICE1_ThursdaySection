@@ -9,7 +9,7 @@ import java.util.Scanner;
  *
  * @author dancye
  * @modifier Jinyoung (Kayla) Jeon
- *
+ * 5/27/2021
  */
 public class CardTrick {
 
