@@ -30,6 +30,9 @@ public class CardTrick
       Card luckyCard = new Card();
       luckyCard.setValue(5);
       luckyCard.setSuit("Hearts");
+      
+      //Welcome Message
+      System.out.println("Welcome to the Magic Hand!");
 
       //Searching MagicHand for the Lucky Card
       boolean match = false;
