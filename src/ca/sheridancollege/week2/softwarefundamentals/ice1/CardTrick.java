@@ -53,6 +53,9 @@ public class CardTrick
          System.out.println("Enter valid Suit name!");
       }
 
+      /* for ( ) {
+       *
+       * } */
 
       // and search magicHand here
       //Then report the result here
