@@ -14,6 +14,8 @@ public class CardTrick
 
    public static void main (String[] args)
    {
+      Scanner input = new Scanner(System.in);
+
       Card[] magicHand = new Card[7];
 
       for (int i = 0; i < magicHand.length; i++) {
@@ -26,12 +28,20 @@ public class CardTrick
          int numSuit = ra.nextInt(4);
          c.setSuit(Card.SUITS[numSuit]);
 
-         System.out.println(c.getValue() + " of: " + c.getSuit());
-         //magicHand[i] = 
+         //System.out.println(c.getValue() + " of: " + c.getSuit());
+         magicHand[i] = c;
          //assign c to magichHand[i] here
       }
 
-      //insert code to ask the user for Card value and suit, create their card
+
+      System.out.print("Enter the number of card(1 to 13): ");
+      int userValue = input.nextInt();
+      System.out.print("Enter the name of Suit(Hearts, Diamonds, Spades, Clubs): ");
+      String userSuit = input.nextLine();
+
+      System.out.println("\nYou entered: " + userValue + " of:  " + userSuit);
+
+
       // and search magicHand here
       //Then report the result here
       //follow the remainder of the instructions in the ICE 1 doc
