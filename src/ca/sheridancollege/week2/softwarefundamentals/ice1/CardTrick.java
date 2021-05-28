@@ -26,31 +26,34 @@ public class CardTrick {
             c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
             //assign c to magichHand[i] here
             magicHand [i] = c;
-            System.out.println(c.getValue() + c.getSuit());
+            
             
             
             
             
         }
-    Scanner scan = new Scanner(System.in); 
+    /*Scanner scan = new Scanner(System.in); 
     Card userCard = new Card();
     System.out.println("Choose the number of your card ( number between 1-13(ace is one, jack is 11, Queen 12, King 13))");
     userCard.setValue(scan.nextInt());
     System.out.println("Please choose a number between 0-3 to represent the suit (hearts =0, diamonds = 1, spades = 2, clubs = 3");
-    userCard.setSuit(Card.SUITS[scan.nextInt()]);
-    
+    userCard.setSuit(Card.SUITS[scan.nextInt()]);*/
+       
+    Card luckyCard = new Card();
+   luckyCard.setValue(10);
+   luckyCard.setSuit(Card.SUITS[1]);
     
     char isThere = 'F';
     for (int i = 0; i < 6; i++) {
-        if (magicHand[i].getValue() == userCard.getValue() && magicHand[i].getSuit().equals(userCard.getSuit()))
+        if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit()))
             isThere = 'T';
     }
       
     if (isThere == 'T') {
-        System.out.println("Your Card was in the magic hand! your card was: " +userCard.getValue() + " of " + userCard.getSuit() );
+        System.out.println("Your Card was in the magic hand! your card was: " +luckyCard.getValue() + " of " + luckyCard.getSuit() );
     }
     else {
-        System.out.println("Your Card was NOT in the magic hand :(. your card was: " +userCard.getValue() + " of " + userCard.getSuit() );
+        System.out.println("Your Card was NOT in the magic hand :(. your card was: " +luckyCard.getValue() + " of " + luckyCard.getSuit() );
     }
             
         
