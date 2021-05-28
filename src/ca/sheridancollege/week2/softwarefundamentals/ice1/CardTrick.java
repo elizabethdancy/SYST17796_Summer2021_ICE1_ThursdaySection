@@ -11,7 +11,6 @@ import java.util.Scanner;
  */
 public class CardTrick
 {
-
    public static void main (String[] args)
    {
       Card[] magicHand = new Card[7];
@@ -52,20 +51,15 @@ public class CardTrick
       }
 
       // Searching MagicHand for the user's chosen card
-      boolean matchNum = false;
+      boolean match = false;
       for (int i = 0; i < magicHand.length; i++) {
-         if (userNum == magicHand[i].getValue()) {
-            matchNum = true;
-         }
-      }
-      boolean matchSuit = false;
-      for (int i = 0; i < magicHand.length; i++) {
-         if (userSuit.equalsIgnoreCase(magicHand[i].getSuit())) {
-            matchSuit = true;
+         if (userNum == magicHand[i].getValue()
+             && userSuit.equalsIgnoreCase(magicHand[i].getSuit())) {
+            match = true;
          }
       }
       //Reporting whether user chose a card that was in the MagicHand
-      if (matchNum == true && matchSuit == true) {
+      if (match) {
          System.out.println("Congrats! Your card is in the Magic Hand!");
       }
       else {
