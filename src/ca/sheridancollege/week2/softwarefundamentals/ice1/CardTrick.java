@@ -66,10 +66,10 @@ public class CardTrick
       }
       //Reporting whether user chose a card that was in the MagicHand
       if (matchNum == true && matchSuit == true) {
-         System.out.println("Its a match!");
+         System.out.println("Congrats! Your card is in the Magic Hand!");
       }
       else {
-         System.out.println("Its not a match.");
+         System.out.println("Sorry, your card is not in the Magic Hand.");
       }
    }
 }
