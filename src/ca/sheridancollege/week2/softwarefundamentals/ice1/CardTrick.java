@@ -23,6 +23,11 @@ public class CardTrick
          c = magicHand;
          Random x = new Random();
       }
+      //lucky card
+      Card lucky = new Card();
+      lucky.setValue(7);
+      lucky.setSuit("hearts"); 
+      
       Scanner input = new Scanner(System.In);
       System.out.println("Pick a card ..any card");
 
