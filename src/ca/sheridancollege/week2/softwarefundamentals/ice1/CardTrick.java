@@ -26,17 +26,17 @@ public class CardTrick
       //lucky card
       Card lucky = new Card();
       lucky.setValue(7);
-      lucky.setSuit("hearts"); 
-      
-      Scanner input = new Scanner(System.In);
-      System.out.println("Pick a card ..any card");
+      lucky.setSuit("hearts");
 
-      Card u = new Card();
-      u.setValue(input.nextInt());
-      u.setSuit(input.next()); //insert code to ask the user for Card value and suit, create their card
+      Scanner input = new Scanner(System.In);
+      //System.out.println("Pick a card ..any card");
+
+      //Card u = new Card();
+      //u.setValue(input.nextInt());
+      //u.setSuit(input.next()); //insert code to ask the user for Card value and suit, create their card
 
       for (int i = 0; i < magicHand.length; i++) {
-         if (Card[i].getValue == u.getValue && Card[i].getSuit == u.getSuit) {
+         if (Card[i].getValue == lucky.getValue && Card[i].getSuit == lucky.getSuit) {
             System.out.println("Your card is in the magic hand!!!");
          }
          else {
