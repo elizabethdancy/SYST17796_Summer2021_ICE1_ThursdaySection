@@ -28,7 +28,7 @@ public class CardTrick
          int numSuit = ra.nextInt(4);
          c.setSuit(Card.SUITS[numSuit]);
 
-         //System.out.println(c.getValue() + " of: " + c.getSuit());
+         System.out.println(c.getValue() + " of: " + c.getSuit());
          magicHand[i] = c;
          //assign c to magichHand[i] here
       }
@@ -53,9 +53,14 @@ public class CardTrick
          System.out.println("Enter valid Suit name!");
       }
 
-      /* for ( ) {
-       *
-       * } */
+      for (int i = 0; i < magicHand.length; i++) {
+         if (userValue == magicHand[i].getValue() && userSuit == magicHand[i].getSuit()) {
+            System.out.println("You win!");
+         }
+         else {
+
+         }
+      }
 
       // and search magicHand here
       //Then report the result here
