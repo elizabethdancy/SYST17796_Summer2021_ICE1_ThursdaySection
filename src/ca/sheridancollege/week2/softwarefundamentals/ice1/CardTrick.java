@@ -40,7 +40,7 @@ public class CardTrick
       System.out.print("Enter the number of card(1 to 13): ");
       int userValue = input.nextInt();*/
       
-      card luckyCard = new Card;
+      Card luckyCard = new Card();
       String userSuit = "Hearts";
       int userValue = 9;
       luckyCard.setValue(userValue);
