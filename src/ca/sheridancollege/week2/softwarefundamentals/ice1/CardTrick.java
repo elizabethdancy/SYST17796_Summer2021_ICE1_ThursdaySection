@@ -1,6 +1,5 @@
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 import java.util.Random;
-import java.util.Scanner;
 /**
  * A class that fills a magic hand of 7 cards with random Card Objects
  * and then asks the user to pick a card and searches the array of cards
@@ -27,34 +26,16 @@ public class CardTrick
          c.setSuit(Card.SUITS[suitNum]);
          magicHand[i] = c;
       }
+      //Setting the card value and suit for Lucky Card
+      Card luckyCard = new Card();
+      luckyCard.setValue(5);
+      luckyCard.setSuit("Hearts");
 
-      Scanner input = new Scanner(System.in);
-      System.out.println("Welcome to the Magic Hand!");
-      System.out.println("Please pick a card!");
-
-      //Taking user input for their Card value and suit
-      System.out.println("Enter your card value.");
-      int userNum = input.nextInt();
-      while (userNum < 1 || userNum > 13) {
-         System.out.println("Error: Enter a valid card value!");
-         System.out.println("Enter your card value again.");
-         userNum = input.nextInt();
-      }
-      input.nextLine();
-      System.out.println("Enter the suit of your card.");
-      String userSuit = input.nextLine();
-      while (!userSuit.equalsIgnoreCase("Clubs") && !userSuit.equalsIgnoreCase("Hearts")
-          && !userSuit.equalsIgnoreCase("Spades") && !userSuit.equalsIgnoreCase("Diamonds")) {
-         System.out.println("Error: Enter a valid suit!");
-         System.out.println("Enter the suit of your card again.");
-         userSuit = input.nextLine();
-      }
-
-      // Searching MagicHand for the user's chosen card
+      //Searching MagicHand for the Lucky Card
       boolean match = false;
       for (int i = 0; i < magicHand.length; i++) {
-         if (userNum == magicHand[i].getValue()
-             && userSuit.equalsIgnoreCase(magicHand[i].getSuit())) {
+         if (luckyCard.getValue() == magicHand[i].getValue()
+             && luckyCard.getSuit().equalsIgnoreCase(magicHand[i].getSuit())) {
             match = true;
          }
       }
