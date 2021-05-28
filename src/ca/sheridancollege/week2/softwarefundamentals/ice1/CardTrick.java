@@ -13,19 +13,21 @@ public class CardTrick
 
    public static void main (String[] args)
    {
+      //TODO: Variable Declarations for the storage of the 7 guessing cards.
       Card[] magicHand = new Card[7];
 
+      //TODO: Store the random values and card suits of the 7 cards.
       for (int i = 0; i < magicHand.length; i++) {
-         Card c = new Card();
-         //c.setValue(insert call to random number generator here)
-         //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-         //assign c to magichHand[i] here
+         Card cards = new Card();
+
       }
 
-      //insert code to ask the user for Card value and suit, create their card
-      // and search magicHand here
-      //Then report the result here
-      //follow the remainder of the instructions in the ICE 1 doc
+      //TODO: Make a user input for the user to enter their card (their values and
+      //their card suit).
+
+      //TODO: Determine the guessing cards that match the user’s card.
+
+      //TODO: Determine if the player wins or looses.
    }
 
 }
