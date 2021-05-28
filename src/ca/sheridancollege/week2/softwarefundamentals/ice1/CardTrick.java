@@ -27,19 +27,36 @@ public class CardTrick {
         }
 
         //insert code to ask the user for Card value and suit, create their card
-        Card userCard = new Card();
+       /* Card userCard = new Card();
         Scanner input = new Scanner(System.in);
         System.out.println("Enter a card value from 1-13: ");
         userCard.setValue(input.nextInt());
           input.nextLine();
         System.out.println("Pick a suit: \"Hearts\", \"Diamonds\", \"Spades\", \"Clubs\" ");
 
-        userCard.setSuit(input.nextLine());
+        userCard.setSuit(input.nextLine());*/
+        
+        //new changes
+        Card luckyCard= new Card();
+        luckyCard.setValue(9);
+        luckyCard.setSuit("Diamonds");
   
+        // search magicHand here and display
+       /* int youGotIt=1;
+        for (int i = 0; i < magicHand.length; i++) {
+            if (magicHand[i].getValue() == userCard.getValue() && magicHand[i].getSuit().equals(userCard.getSuit())) {
+                youGotIt++;
+                System.out.println("congrats! you won ");
+            }  else {
+            System.out.println("Good luck for the next time! you lost ");
+        }break;
+
+        }*/
+        
         // search magicHand here and display
         int youGotIt=1;
         for (int i = 0; i < magicHand.length; i++) {
-            if (magicHand[i].getValue() == userCard.getValue() && magicHand[i].getSuit().equals(userCard.getSuit())) {
+            if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
                 youGotIt++;
                 System.out.println("congrats! you won ");
             }  else {
