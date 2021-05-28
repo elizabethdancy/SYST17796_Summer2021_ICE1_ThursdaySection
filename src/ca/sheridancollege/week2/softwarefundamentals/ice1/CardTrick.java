@@ -29,8 +29,6 @@ public class CardTrick {
             c.setValue(valueNum);
             c.setSuit(Card.SUITS[suitNum]);
             magicHand[i] = c;
-            System.out.println(magicHand[i].getValue());
-            System.out.println(magicHand[i].getSuit());
         }
         
         /*
