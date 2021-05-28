@@ -15,6 +15,11 @@ public class CardTrick
     public static void main (String[] args)
     {
         Card[] magicHand = new Card[7];
+        
+        // initialize the luckCard 
+        Card luckyCard = new Card();
+        luckyCard.setValue(5);
+        luckyCard.setSuit("Spades");
 
         for (int i = 0; i < magicHand.length; i++) {
             Card c = new Card();
@@ -46,12 +51,16 @@ public class CardTrick
         for (int i = 0; i < magicHand.length; i++) {
 
             if (userValue == magicHand[i].getValue() && userSuit.equalsIgnoreCase(magicHand[i].getSuit())) {
-                System.out.println("Conglatuation! Your card " + userValue + " of " + userSuit + " is in the magic hand!");
+                System.out.println("Conglatuation! Your card " + userValue + " of " + userSuit + " is in the Magic hand!");
+            
+            // report a winning message for the lucky card
+            } else if (userValue == luckyCard.getValue() && userSuit.equalsIgnoreCase(luckyCard.getSuit())) {
+                System.out.println("Conglatuation! Your card " + userValue + " of " + userSuit + " is in the Lucky Card!");
+            
+            } else {
+                System.out.println("Sorry! Your card " + userValue + " of " + userSuit + " is not in the Magic hand!");
             }
-            else {
-                System.out.println("Sorry! Your card " + userValue + " of " + userSuit + " is not in the magic hand!");
-            }
-            return;
+            break;
         }
 
         //follow the remainder of the instructions in the ICE 1 doc
