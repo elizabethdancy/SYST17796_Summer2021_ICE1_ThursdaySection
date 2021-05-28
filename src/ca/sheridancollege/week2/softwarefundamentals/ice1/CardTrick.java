@@ -26,13 +26,16 @@ public class CardTrick
          magicHand[i] = c;
          //assign c to magichHand[i] here
       }
+
       Card luckyCard = new Card();
       luckyCard.setValue(3);
-      luckyCard.setSuit("Diamonds");
+      luckyCard.setSuit(Card.SUITS[2]);
 
 
-      Scanner in = new Scanner(System.in);
+      Scanner in = new Scanner(System.in); //getting user input from keyboard
+
       Card user = new Card();
+
       System.out.println("What is the Card number?");
       user.setValue(in.nextInt()); //insert code to ask the user for Card valueand suit, create their card
 
@@ -43,16 +46,16 @@ public class CardTrick
       boolean guessluckyCard = false;
       for (int i = 0; i < magicHand.length; i++) { // and search magicHandhere
          if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
-
             guessluckyCard = true;
+            break;
          }
+
 
          if (guessluckyCard) {
-            System.out.println("The card " + luckyCard.getValue() + "" + luckyCard.getSuit() + " is Winning Card");
-
+            System.out.println("The card " + luckyCard.getValue() + " " + luckyCard.getSuit() + "  is Winning Card");
          }
          else {
-            System.out.println("Sorry. The card " + luckyCard.getValue() + "" + luckyCard.getSuit() + "is Wrong.....");
+            System.out.println("Sorry. The card " + luckyCard.getValue() + " " + luckyCard.getSuit() + " is Wrong.....");
          }
 
 
