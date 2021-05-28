@@ -32,12 +32,20 @@ public class CardTrick
 
       //TODO: Make a user input for the user to enter their card (their values and
       //their card suit).
+      /*
       System.out.print("Enter a value between 1 - 13: ");
       int cardValue = input.nextInt();
 
       System.out.print("Enter a suit of cards (Hearts, Diamonds, "
           + "Spades, Clubs): ");
       String userSuit = input.next();
+      */
+      
+      //TODO: Insert the user's card number and card suit inside of a class
+      //called "luckyCard".
+      Card luckyCard = new Card();
+      luckyCard.setValue(7);
+      luckyCard.setSuit("Clubs");
 
 
 
