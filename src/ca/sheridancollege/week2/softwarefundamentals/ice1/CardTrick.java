@@ -30,7 +30,7 @@ public class CardTrick
       Card luckyCard = new Card();
       luckyCard.setValue(5);
       luckyCard.setSuit("Hearts");
-      
+
       //Welcome Message
       System.out.println("Welcome to the Magic Hand!");
 
@@ -44,10 +44,10 @@ public class CardTrick
       }
       //Reporting whether user chose a card that was in the MagicHand
       if (match) {
-         System.out.println("Congrats! Your card is in the Magic Hand!");
+         System.out.println("Congrats! You win!");
       }
       else {
-         System.out.println("Sorry, your card is not in the Magic Hand.");
+         System.out.println("Sorry, you lose.");
       }
    }
 }
