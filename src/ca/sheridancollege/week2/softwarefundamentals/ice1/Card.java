@@ -22,6 +22,12 @@ public class Card {
     public String getSuit() {
         return suit;
     }
+    
+    public Card() {}
+    public Card(String suit, int value) {
+        this.suit = suit;
+        this.value = value;
+    }
 
     /**
      * @param suit the suit to set
