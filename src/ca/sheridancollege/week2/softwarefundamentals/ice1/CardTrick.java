@@ -27,9 +27,9 @@ public class CardTrick
          //assign c to magichHand[i] here
       }
       Card luckyCard = new Card();
-      luckyCard.setValue = (3);
-      luckyCard.setSuit(Card.SUIT[2]);
-      
+      luckyCard.setValue(3);
+      luckyCard.setSuit("Diamonds");
+
 
       Scanner in = new Scanner(System.in);
       Card user = new Card();
@@ -39,19 +39,42 @@ public class CardTrick
       System.out.println(" Select a suit number betweem 0 to 3");
       user.setSuit(Card.SUITS[in.nextInt()]);
 
-      boolean guessMagicHand = false;
+
+      boolean guessluckyCard = false;
       for (int i = 0; i < magicHand.length; i++) { // and search magicHandhere
-         if (magicHand[i].getValue() == user.getValue() && magicHand[i].getSuit().equals(user.getSuit())) {
-            guessMagicHand = true;
+         if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
+
+            guessluckyCard = true;
          }
 
-         if (guessMagicHand) {
-            System.out.println("You got it . your card number is " + user.getValue() + user.getSuit());//Then report the result here
+         if (guessluckyCard) {
+            System.out.println("The card " + luckyCard.getValue() + "" + luckyCard.getSuit() + " is Winning Card");
+
          }
          else {
-            System.out.println("Sorry.Your number" + user.getValue() + user.getSuit() + "is Wrong");
+            System.out.println("Sorry. The card " + luckyCard.getValue() + "" + luckyCard.getSuit() + "is Wrong.....");
          }
 
+
+
+
+
+         /* boolean guessMagicHand = false;
+          * for (int i = 0; i < magicHand.length; i++) { // and search
+          * magicHandhere
+          * if (magicHand[i].getValue() == user.getValue() &&
+          * magicHand[i].getSuit().equals(user.getSuit())) {
+          * guessMagicHand = true;
+          * }
+          *
+          * if (guessMagicHand) {
+          * System.out.println("You got it . your card number is " +
+          * user.getValue() + " " + user.getSuit());//Then report the result
+          * here
+          * } else {
+          * System.out.println("Sorry.Your number" + " " + user.getValue() +
+          * user.getSuit() + " is Wrong");
+          * } */
       }
    }
 }
