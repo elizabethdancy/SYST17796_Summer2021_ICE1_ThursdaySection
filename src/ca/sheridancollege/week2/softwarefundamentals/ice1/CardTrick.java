@@ -31,19 +31,19 @@ public class CardTrick {
             magicHand[i] = c;           
         }
         
-        
+        /*
         //insert code to ask the user for Card value and suit, create their card
         System.out.print("Enter card value(between 1-13): ");
         int userValue = input.nextInt();
         System.out.print("Enter suit(Clubs, Spades, Diamonds, Hearts): ");
         String userSuit = input.next();
-        Card userCard = new Card(userSuit, userValue);
+        Card userCard = new Card(userSuit, userValue); */
         
         // and search magicHand here
         boolean guess = true;
         for (int i = 0; i < 7; i++) {
-            if (userCard.getSuit().equals(magicHand[i].getSuit()) && 
-            userCard.getValue() == magicHand[i].getValue()) {
+            if (luckyCard.getSuit().equals(magicHand[i].getSuit()) && 
+            luckyCard.getValue() == magicHand[i].getValue()) {
                 guess = true;
             }else{
                 guess = false;
