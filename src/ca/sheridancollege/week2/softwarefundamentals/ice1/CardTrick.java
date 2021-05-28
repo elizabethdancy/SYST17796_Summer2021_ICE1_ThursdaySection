@@ -7,7 +7,7 @@ import java.util.Scanner;
  * for the match to the user's card. To be used as starting code in ICE 1
  *
  * @author dancye
- * @modifier Ryan Gilchrist
+ * @modifier Ryan Gilchrist - 991633382
  */
 public class CardTrick
 {
@@ -18,23 +18,22 @@ public class CardTrick
 
       for (int i = 0; i < magicHand.length; i++) {
          Card c = new Card();
-         //c.setValue(insert call to random number generator here)
-         //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
-         //assign c to magichHand[i] here
+
+         //Setting the MagicHand's card values and suits
          Random num = new Random();
          int number = num.nextInt(13);
          int cardNum = number + 1;
          c.setValue(cardNum);
-
          int suitNum = num.nextInt(4);
          c.setSuit(Card.SUITS[suitNum]);
-
-         magicHand[i] = c; //??This correct??
-         //System.out.println(c.getValue() + " of: " + c.getSuit()); //Dont think need to keep this line
+         magicHand[i] = c;
       }
 
-      //insert code to ask the user for Card value and suit, create their card
       Scanner input = new Scanner(System.in);
+      System.out.println("Welcome to the Magic Hand!");
+      System.out.println("Please pick a card!");
+
+      //Taking user input for their Card value and suit
       System.out.println("Enter your card value.");
       int userNum = input.nextInt();
       while (userNum < 1 || userNum > 13) {
@@ -52,9 +51,7 @@ public class CardTrick
          userSuit = input.nextLine();
       }
 
-      // and search magicHand here
-      //Then report the result here
-      //follow the remainder of the instructions in the ICE 1 doc
+      // Searching MagicHand for the user's chosen card
       boolean matchNum = false;
       for (int i = 0; i < magicHand.length; i++) {
          if (userNum == magicHand[i].getValue()) {
@@ -67,6 +64,7 @@ public class CardTrick
             matchSuit = true;
          }
       }
+      //Reporting whether user chose a card that was in the MagicHand
       if (matchNum == true && matchSuit == true) {
          System.out.println("Its a match!");
       }

@@ -8,7 +8,7 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * This code is to be used in ICE1. When you create your own branch,
  *
  * @author dancye
- * @modifier Ryan Gilchrist
+ * @modifier Ryan Gilchrist - 991633382
  */
 public class Card
 {
