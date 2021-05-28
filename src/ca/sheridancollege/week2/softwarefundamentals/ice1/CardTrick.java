@@ -9,7 +9,7 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * @modifyedBy emmettlaw10 (991628505)
  * 
  */
-import java.util.Random;
+
 import java.util.Scanner;
 
 public class CardTrick {
@@ -22,20 +22,16 @@ public class CardTrick {
         {
             Card c = new Card();
             //c.setValue(insert call to random number generator here)
-            Random r = new Random() ;
-            int number = r.nextInt(13);
-            int number2 = number + 1;
-            c.setValue(number2);
-            int suit = r.nextInt(4);
-            c.setSuit(Card.SUITS[suit]);
+            c.setValue((int)(Math.random() * 13 + 1));
+            c.setSuit(Card.SUITS[(int)(Math.random() * 4)]);
             //assign c to magichHand[i] here
             magicHand [i] = c;
+            System.out.println(c.getValue() + c.getSuit());
+            
             
             
             
         }
-        
-        //insert code to ask the user for Card value and suit, create their card
     Scanner scan = new Scanner(System.in); 
     Card userCard = new Card();
     System.out.println("Choose the number of your card ( number between 1-13(ace is one, jack is 11, Queen 12, King 13))");
@@ -44,24 +40,23 @@ public class CardTrick {
     userCard.setSuit(Card.SUITS[scan.nextInt()]);
     
     
-    boolean isCardInHand =false;
-    for (int i = 0; i <= 6; i++) {
+    char isThere = 'F';
+    for (int i = 0; i < 6; i++) {
         if (magicHand[i].getValue() == userCard.getValue() && magicHand[i].getSuit().equals(userCard.getSuit()))
-            isCardInHand = true;
+            isThere = 'T';
     }
-    // and search magicHand here
       
-    if (isCardInHand = true) {
+    if (isThere == 'T') {
         System.out.println("Your Card was in the magic hand! your card was: " +userCard.getValue() + " of " + userCard.getSuit() );
     }
     else {
         System.out.println("Your Card was NOT in the magic hand :(. your card was: " +userCard.getValue() + " of " + userCard.getSuit() );
     }
-       //Then report the result here     
+            
         
-  
-        
-        
+  //insert code to ask the user for Card value and suit, create their card
+        // and search magicHand here
+        //Then report the result here
         //follow the remainder of the instructions in the ICE 1 doc
     }
     
