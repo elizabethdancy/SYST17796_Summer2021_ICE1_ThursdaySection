@@ -32,20 +32,20 @@ public class CardTrick
       }
 
       //insert code to ask the user for Card value and suit, create their card
-      
+
       String suit = "Hearts";
-     
+
       int value = 7;
 // and search magicHand here
 
       for (int i = 0; i < magicHand.length; i++) {
          if (value == magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit())) {
-            System.out.println("Your lucky card was found in the magic hand.");
+            System.out.println("Your lucky card was found in the magic hand. You won");
             return;
          }
       }
 //Then report the result here
-      System.out.println("Your lucky card was not found in the magic hand.");
+      System.out.println("Your lucky card was not found in the magic hand. You are a loser");
 //follow the remainder of the instructions in the ICE 1 doc
    }
 }
