@@ -63,7 +63,7 @@ public class CardTrick {
         else {
         	System.out.print("Card is not in the Hand");
         }
-
+      }
     }
     
 
