@@ -38,6 +38,7 @@ public class CardTrick {
         int value = in.nextInt();
         System.out.print("Enter Suit:");
         int suit = in.nextInt();
+        
         Card usercard = new Card();
         usercard.setSuit(Card.SUITS[suit]);
         usercard.setValue(value);
@@ -50,19 +51,22 @@ public class CardTrick {
         boolean cardInHand = false;
         for (int i=0; i<magicHand.length; i++)
         {
-        	if(usercard.getValue() == magicHand[i].getValue() && usercard.getValue() == magicHand[i].getValue()) {
+        	if(luckycard.getValue() == magicHand[i].getValue() 
+                    && luckycard.getValue() == magicHand[i].getValue()) 
+                {
         		cardInHand = true;
         		break;
         	}
         	cardInHand = false;
         }
         //Then report the result here
-        if(cardInHand == true) {
-        	System.out.print("Card is in the Hand");
-        }
+        if(cardInHand == true) 
+            {
+        	System.out.print("Yeh you WON today");
+            }
         else {
-        	System.out.print("Card is not in the Hand");
-        }
+        	System.out.print("Sorry you lost today");
+             }
       }
     }
     
