@@ -42,7 +42,7 @@ public class CardTrick
             match = true;
          }
       }
-      //Reporting whether user chose a card that was in the MagicHand
+      //Reporting whether luckyCard matches a card in the MagicHand
       if (match) {
          System.out.println("Congrats! You win!");
       }
