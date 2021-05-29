@@ -32,18 +32,38 @@ public class CardTrick {
             System.out.println(c.getValue() + " of " + c.getSuit());
         }
         
-
-      
       Scanner scr = new Scanner(System.in); 
 
       Card player = new Card();
+      
       System.out.println("Pick a card! Any card!");
+      
       System.out.println("Select card number between 1 to 13");
+      
       player.setValue(scr.nextInt()); 
+      
+      Card luckyCard = new Card();
+      luckyCard.setValue(1);
+      luckyCard.setSuit(Card.SUITS[1]);
 
       System.out.println("Select a suit number between 0 to 3");
       player.setSuit(Card.SUITS[scr.nextInt()]);
       
+     boolean guessluckyCard = false;
+     
+     for (int i = 0; i < magicHand.length; i++) { // and search magicHandhere
+           if (magicHand[i].getValue() == luckyCard.getValue() && magicHand[i].getSuit().equals(luckyCard.getSuit())) {
+                guessluckyCard = true;
+            break;
+         }
+
+         if (guessluckyCard) {
+            System.out.println("Your guess " + player.getValue() + " of " + player.getSuit() + " is correct. Congrats!");
+         }
+         else {
+            System.out.println("Your guess " + player.getValue() + " of " + player.getSuit() + " is incorrect. Please try again.");
+         }
+      /**
         boolean guessMagicHand = false;
         
         for (int i = 0; i < magicHand.length; i++) { 
@@ -57,7 +77,7 @@ public class CardTrick {
         else {
             System.out.println("Your guess " + player.getValue() + " of " + player.getSuit() + " is incorrect. Please try again.");
          } 
-
+        */
     }
     
 }
