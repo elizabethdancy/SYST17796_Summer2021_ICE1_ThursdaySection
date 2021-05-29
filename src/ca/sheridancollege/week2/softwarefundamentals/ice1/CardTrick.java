@@ -33,7 +33,7 @@ public class CardTrick {
         Card luckyCard = new Card();
         
         luckyCard.setValue(1);
-        lucyCard.setSuit(Card.SUITS[0]);
+        luckyCard.setSuit(Card.SUITS[0]);
         
         System.out.println("Pick a card, any card!");
         
