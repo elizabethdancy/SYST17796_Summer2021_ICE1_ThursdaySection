@@ -40,7 +40,7 @@ public class CardTrick
 
       for (int i = 0; i < magicHand.length; i++) {
          if (value == magicHand[i].getValue() && suit.equalsIgnoreCase(magicHand[i].getSuit())) {
-            System.out.println("Your card was found in the magic hand.");
+            System.out.println("Your lucky card was found in the magic hand.");
             return;
          }
       }
