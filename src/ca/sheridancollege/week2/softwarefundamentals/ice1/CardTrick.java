@@ -15,16 +15,16 @@ public class CardTrick {
         
         for (int i=0; i<magicHand.length; i++)
         {
-            Card c = new Card();
+            Card luckyCard = new Card();
             //c.setValue(insert call to random number generator here)
             //c.setSuit(Card.SUITS[insert call to random number between 0-3 here])
             //assign c to magichHand[i] here
         }
         
-        //insert code to ask the user for Card value and suit, create their card
-        // and search magicHand here
-        //Then report the result here
-        //follow the remainder of the instructions in the ICE 1 doc
+          if(card.getSuit().equales(luckyCard.Card.SUITS[suitNum])&& card.getValue()== luckyCard.getValue;)){
+      System.out.println("you won!");
+    }else{
+            System.out.println("game over");
     }
     
 }
