@@ -6,6 +6,7 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  *
  * @author Chris Jagernath - 991635121
  */
+import java.util.Random;
 public class CardTrick
 {
 
@@ -20,15 +21,14 @@ public class CardTrick
          int s = rand.nextInt(3);
          c.setValue(n);
          c.setSuit(Card.SUITS[s]);
-         c = magicHand;
-         Random x = new Random();
+         magicHand[i] = c;
       }
       //lucky card
       Card lucky = new Card();
       lucky.setValue(7);
       lucky.setSuit("hearts");
 
-      Scanner input = new Scanner(System.In);
+      //Scanner input = new Scanner(System.in);
       //System.out.println("Pick a card ..any card");
 
       //Card u = new Card();
@@ -36,7 +36,7 @@ public class CardTrick
       //u.setSuit(input.next()); //insert code to ask the user for Card value and suit, create their card
 
       for (int i = 0; i < magicHand.length; i++) {
-         if (Card[i].getValue == lucky.getValue && Card[i].getSuit == lucky.getSuit) {
+         if (magicHand[i].getValue == lucky.getValue && magicHand[i].getSuit == lucky.getSuit) {
             System.out.println("Your card is in the magic hand!!!");
          }
          else {
