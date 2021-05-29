@@ -21,7 +21,7 @@ public class CardTrick {
         {
             Card c = new Card();
             c.setValue(rand.nextInt(13)+1);
-            c.setSuit(Card.SUITS[rand.nextInt(3)+1]);
+            c.setSuit(Card.SUITS[rand.nextInt(4)]);
             magicHand[i] = c;
             
             System.out.println(c.getValue() + " : " + c.getSuit());
@@ -35,22 +35,19 @@ public class CardTrick {
         luckyCard.setValue(1);
         luckyCard.setSuit(Card.SUITS[0]);
         
-        System.out.println("Pick a card, any card!");
-        
-        System.out.print("Choose a Number from 1-13: ");
-        int cardNumber = in.nextInt();
-        
-        System.out.print("Choose a Suit from 0-3: ");
-        int cardSuit = in.nextInt();
-        
         boolean isCardInMagicHand = false;
+        
         for(Card c : magicHand){
-            if(c.getValue() == cardNumber && c.getSuit().equals(Card.SUITS[cardSuit])){
+            if(c.getValue() == luckyCard.getValue() && c.getSuit().equals(luckyCard.getSuit())){
                 isCardInMagicHand = true;
             }
         }
         
-        System.out.println(isCardInMagicHand);
+        if(isCardInMagicHand){
+            System.out.println("Winner");
+        }else{
+            System.out.println("Loser");
+        }
         //insert code to ask the user for Card value and suit, create their card
         // and search magicHand here
         //Then report the result here
