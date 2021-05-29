@@ -32,10 +32,10 @@ public class CardTrick
       }
 
       //insert code to ask the user for Card value and suit, create their card
-      System.out.println("Enter a suit: ");
-      String suit = scanner.nextLine();
-      System.out.print("Enter a value: ");
-      int value = scanner.nextInt();
+      
+      String suit = "Hearts";
+     
+      int value = 7;
 // and search magicHand here
 
       for (int i = 0; i < magicHand.length; i++) {
@@ -45,7 +45,7 @@ public class CardTrick
          }
       }
 //Then report the result here
-      System.out.println("Your card was not found in the magic hand.");
+      System.out.println("Your lucky card was not found in the magic hand.");
 //follow the remainder of the instructions in the ICE 1 doc
    }
 }
