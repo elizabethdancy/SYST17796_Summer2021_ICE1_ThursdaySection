@@ -30,10 +30,10 @@ public class CardTrick {
             //assign c to magichHand[i] here
         }
         
-        Card luckyCard = new Card()
+        Card luckyCard = new Card();
         
-        c.setValue(1);
-        c.setSuit(Card.SUITS[0]);
+        luckyCard.setValue(1);
+        lucyCard.setSuit(Card.SUITS[0]);
         
         System.out.println("Pick a card, any card!");
         
