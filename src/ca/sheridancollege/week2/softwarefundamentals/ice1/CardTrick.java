@@ -1,4 +1,3 @@
-
 package ca.sheridancollege.week2.softwarefundamentals.ice1;
 
 /**
@@ -8,29 +7,36 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  * @author dancye
  * @modified tehrazeh
  */
+import java.util.Scanner;
 public class CardTrick {
     
     public static void main(String[] args)
     {
         Card[] magicHand = new Card[7];
         
-        for (int i=0; i<magicHand.length; i++)
+        for (int i=0; i<magicHand.length ; i++)
         {
             Card c = new Card();
             c.setValue(((int)Math.random()*13 +1));
             c.setSuit(Card.SUITS[(int)Math.random() * 4]);
-            c = magicHand[i];
+           magicHand[i] = c;
         }
         
         Card luckyCard = new Card();
-        c.setValue(12);
-        c.setSuit(Card.SUITS[2])
+        Scanner input = new Scanner(System.in);
         
-        for (Card сard: magicHand) {
-           if (сard.getSuit().equals(Card.SUITS[2]) &&
-                   сard.getValue() == 12) {
-               System.out.println("You got it, the card is " + userValue
-                    + " of " + userSuit);
+        System.out.print("Enter a card number (1-13): ");
+        luckyCard.setValue(input.nextInt());
+        
+        System.out.print("Enter a card suit (0-3): ");
+        int suit = input.nextInt();
+        luckyCard.setSuit(Card.SUITS[suit]);
+        
+        for (Card card: magicHand) {
+           if (card.getSuit().equals(luckyCard.SUITS[suit]) &&
+                   card.getValue() == luckyCard.getValue()) {
+               System.out.println("You got it, the card is " + card.getValue()
+                    + " of " + card.getValue());
            } else {
                 System.out.println("Unfortenately, no matches");
            }
