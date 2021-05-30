@@ -36,12 +36,15 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         //follow the remainder of the instructions in the ICE 1 doc
+       
+        /*
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a card value between 1 and 13:");      
         int cardValue = in.nextInt();
         in.nextLine();
         System.out.print("Enter a card suit:");
         String suit = in.nextLine();
+        */
         boolean found = false;
         for (int i=0; i<magicHand.length; i++)
         {
