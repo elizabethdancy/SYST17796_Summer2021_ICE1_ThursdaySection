@@ -36,8 +36,12 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         //follow the remainder of the instructions in the ICE 1 doc
-       
+
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(Card.SUITS[0]);
         /*
+
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a card value between 1 and 13:");      
         int cardValue = in.nextInt();
@@ -48,7 +52,7 @@ public class CardTrick {
         boolean found = false;
         for (int i=0; i<magicHand.length; i++)
         {
-            if(magicHand[i].getValue() == cardValue && suit.toLowerCase().equals(magicHand[i].getSuit().toLowerCase()))
+            if(magicHand[i].getValue() == luckyCard.getValue() && luckyCard.getSuit().toLowerCase().equals(magicHand[i].getSuit().toLowerCase()))
             {
                 found = true;
                 break;
@@ -56,9 +60,9 @@ public class CardTrick {
         }
         
         if(found) {
-            System.out.println("Your card is in the Magic Hand!!");
+            System.out.println("Lucky card is in the Magic Hand!!");
         } else {
-            System.out.println("Your card is NOT in the Magic Hand!");
+            System.out.println("Lucky card is NOT in the Magic Hand!");
         }
         
         
