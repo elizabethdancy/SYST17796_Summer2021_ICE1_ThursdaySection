@@ -9,7 +9,7 @@ import java.util.Scanner;
  * and then asks the user to pick a card and searches the array of cards
  * for the match to the user's card. To be used as starting code in ICE 1
  * @author dancye
- * @modifier Nadia Ghazal
+ * @modifier Nadia Ghazal - Student id : 991611793
  */
 public class CardTrick {
     
