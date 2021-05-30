@@ -36,6 +36,10 @@ public class CardTrick {
         // and search magicHand here
         //Then report the result here
         //follow the remainder of the instructions in the ICE 1 doc
+        Card luckyCard = new Card();
+        luckyCard.setValue(2);
+        luckyCard.setSuit(Card.SUITS[0]);
+        
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a card value between 1 and 13:");      
         int cardValue = in.nextInt();
