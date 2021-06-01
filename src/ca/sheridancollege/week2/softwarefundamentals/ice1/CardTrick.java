@@ -35,11 +35,11 @@ public class CardTrick
 
 
 
-      /*System.out.print("Enter the name of Suit(Hearts, Diamonds, Spades, Clubs): ");
-      String userSuit = input.nextLine();
-      System.out.print("Enter the number of card(1 to 13): ");
-      int userValue = input.nextInt();*/
-      
+      /* System.out.print("Enter the name of Suit(Hearts, Diamonds, Spades, Clubs): ");
+       * String userSuit = input.nextLine();
+       * System.out.print("Enter the number of card(1 to 13): ");
+       * int userValue = input.nextInt(); */
+
       Card luckyCard = new Card();
       String userSuit = "Hearts";
       int userValue = 9;
@@ -47,17 +47,18 @@ public class CardTrick
       luckyCard.setSuit(userSuit);
 
 
-      /*if (userSuit.equals("Clubs") || userSuit.equals("Diamonds") || userSuit.equals("Hearts") || userSuit.equals("Spades")) {
-         if (userValue <= 13 && userValue >= 1) {
-            System.out.println("\nYou entered: " + userValue + " of:  " + userSuit);
-         }
-         else {
-            System.out.println("Enter valid value of card!");
-         }
-      }
-      else {
-         System.out.println("Enter valid Suit name!");
-      }*/
+      /* if (userSuit.equals("Clubs") || userSuit.equals("Diamonds") || userSuit.equals("Hearts") ||
+       * userSuit.equals("Spades")) {
+       * if (userValue <= 13 && userValue >= 1) {
+       * System.out.println("\nYou entered: " + userValue + " of: " + userSuit);
+       * }
+       * else {
+       * System.out.println("Enter valid value of card!");
+       * }
+       * }
+       * else {
+       * System.out.println("Enter valid Suit name!");
+       * } */
 
       for (Card magicHand1 : magicHand) {
          if (luckyCard.getValue() == magicHand1.getValue() && luckyCard.getSuit().equals(magicHand1.getSuit())) {
