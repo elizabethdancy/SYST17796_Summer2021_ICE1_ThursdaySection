@@ -9,7 +9,7 @@ package ca.sheridancollege.week2.softwarefundamentals.ice1;
  *
  * @author dancye
  * ModifiedBy Parteek
- * StudentNumber 991632637
+ * StudentNumber - 991632637
  */
 public class Card
 {
